@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaCode, FaDesktop, FaMobile, FaRobot, FaProjectDiagram } from 'react-icons/fa';
+import { FaCode, FaRobot, FaProjectDiagram } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -51,11 +51,11 @@ const About = () => {
             </h3>
             
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm Fatima Khalid. A Computer Science student in the end of my 3rd year. I'm a developer who loves solving messy problems with clean code and smart design. I'm obsessed with building things that work, feel intuitive, and occasionally surprise you with how clever they are. From web apps to AI agents, if it makes people's lives easier, I want to build it.
+              I&apos;m Fatima Khalid. A Computer Science student in the end of my 3rd year. I&apos;m a developer who loves solving messy problems with clean code and smart design. I&apos;m obsessed with building things that work, feel intuitive, and occasionally surprise you with how clever they are. From web apps to AI agents, if it makes people&apos;s lives easier, I want to build it.
             </p>
             
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              My experience spans across the MERN stack, Python-based AI tools, and modern frontend frameworks like Next.js and Tailwind. I've worked in startup-style environments like the Forge Internship, contributed to open-source-style projects, and led development from scratch to deployment. My goal? To create seamless digital experiences and intelligent systems and to keep growing every single step of the way.
+              My experience spans across the MERN stack, Python-based AI tools, and modern frontend frameworks like Next.js and Tailwind. I&apos;ve worked in startup-style environments like the Forge Internship, contributed to open-source-style projects, and led development from scratch to deployment. My goal? To create seamless digital experiences and intelligent systems and to keep growing every single step of the way.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -2,14 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, 
-  FaDatabase, FaGit, FaFigma, FaDocker, FaPython,
+  FaReact, FaNodeJs, 
+  FaGit, FaPython,
   FaSearch, FaProjectDiagram, FaStar, FaTasks,
   FaUserTie, FaUsers, FaBrain
 } from 'react-icons/fa';
 import { 
-  SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, 
-  SiGraphql, SiExpress, SiChainlink, SiOpencv, 
+  SiNextdotjs, SiTailwindcss, SiMongodb, 
+  SiExpress, SiChainlink, SiOpencv, 
   SiStreamlit, SiNotion 
 } from 'react-icons/si';
 

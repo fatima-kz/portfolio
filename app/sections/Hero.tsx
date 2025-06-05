@@ -33,7 +33,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
-              I'm a developer who cares about building software that feels intuitive and actually helps. Not just polished, but purposeful.
+              I&apos;m  a developer who cares about building software that feels intuitive and actually helps. Not just polished, but purposeful.
             </p>
             
             <div className="flex flex-wrap gap-4">

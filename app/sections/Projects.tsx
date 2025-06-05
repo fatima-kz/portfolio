@@ -107,7 +107,7 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each project represents a unique challenge and solution.
+            Here are some of the projects I&apos;ve worked on. Each project represents a unique challenge and solution.
           </p>
           <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
         </motion.div>

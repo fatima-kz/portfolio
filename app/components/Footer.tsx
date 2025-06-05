@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,7 +46,7 @@ const SocialLink = ({
 }: { 
   href: string; 
   children: React.ReactNode;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   return (
     <Link 
@@ -61,15 +61,15 @@ const SocialLink = ({
   );
 };
 
-const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  return (
-    <Link 
-      href={href} 
-      className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-300"
-    >
-      {children}
-    </Link>
-  );
-};
+// const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+//   return (
+//     <Link 
+//       href={href} 
+//       className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-300"
+//     >
+//       {children}
+//     </Link>
+//   );
+// };
 
 export default Footer;

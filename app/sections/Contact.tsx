@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you!
+            Have a project in mind or want to discuss a potential collaboration? I&apos;d love to hear from you!
           </p>
           <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
         </motion.div>
@@ -60,7 +60,7 @@ const Contact = () => {
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 mt-8">
-              I'm available for internships, freelance projects, full-time positions, and consultations. Don't hesitate to reach out!
+              I&apos;m available for internships, freelance projects, full-time positions, and consultations. Don&apos;t hesitate to reach out!
             </p>
           </motion.div>
           
