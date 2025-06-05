@@ -151,27 +151,10 @@ const Experience = () => {  const experiences = [
           className="text-center mt-20"
         >          <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-pastel-purple hover:bg-pastel-pink text-white font-medium rounded-full shadow-lg hover:shadow-pastel-purple/40 transform transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+            className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors duration-300"
           >
-            <span className="relative z-10">Let's Create Something Amazing</span>
-            <span className="absolute top-0 left-0 w-full h-full bg-pastel-mint opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span>
+            Let's Work Together
           </a>
-          
-          <div className="mt-6">
-            <motion.div 
-              className="inline-block"
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop"
-              }}
-            >
-              <span className="text-sm text-pastel-blue font-medium">Scroll to see more</span>
-            </motion.div>
-          </div>
         </motion.div>
       </div>
     </section>
