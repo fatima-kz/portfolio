@@ -93,45 +93,46 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-6">
+  return (    <section id="projects" className="py-20 bg-pastel-blue/10 dark:from-gray-800 dark:to-indigo-950 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-pastel-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-pastel-blue/20 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        >          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-heading-dark">
             My Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Here are some of the projects I&apos;ve worked on. Each project represents a unique challenge and solution.
           </p>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="w-24 h-1 bg-pastel-blue mx-auto mt-4 rounded-full"></div>
+        </motion.div><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
         
         <motion.div 
-          className="text-center mt-12"
+          className="text-center mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <Link href="https://github.com/fatima-kz" 
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white font-medium rounded-lg transition duration-300"
+        >          <Link href="https://github.com/fatima-kz" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-pastel-lavender text-gray-800 font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-pastel-lavender/30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub />
-            See More on GitHub
+            <FaGithub className="text-xl" />
+            <span>See More on GitHub</span>
           </Link>
         </motion.div>
       </div>
@@ -140,58 +141,73 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
-  return (
-    <motion.article 
-      className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+  return (    <motion.article 
+      className="glass dark:glass-dark rounded-xl overflow-hidden shadow-lg hover:shadow-pastel-blue/30 transition-all duration-500 group"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-    >
-      <div className="relative h-56">
+      whileHover={{ y: -10 }}
+    >      <div className="relative h-48 sm:h-56 overflow-hidden">
         <Image 
           src={project.image} 
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-pastel-lavender/40 opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+        
+        <div className="absolute top-3 right-3">
+          <motion.div 
+            className="w-8 h-8 rounded-full bg-pastel-blue flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.5 }}
+          >
+            <FaExternalLinkAlt className="text-white text-xs" />
+          </motion.div>
+        </div>
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-xl font-bold text-pastel-lavender mb-2">
           {project.title}
         </h3>
         
         <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
           {project.description}
-        </p>
-        
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.tags.map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs rounded-full">
+        </p>        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tags.slice(0, 3).map((tag) => (
+            <span key={tag} className="px-2 py-0.5 bg-pastel-blue/20 dark:bg-pastel-blue/30 text-gray-700 dark:text-pastel-blue text-xs rounded-full border border-pastel-blue/30 transition-all duration-300 hover:shadow-pastel-blue/20">
               {tag}
             </span>
           ))}
+          {project.tags.length > 3 && (
+            <span className="px-2 py-0.5 text-xs text-gray-500 dark:text-gray-400">
+              +{project.tags.length - 3} more
+            </span>
+          )}
         </div>
         
         <div className="flex justify-between">
           <Link href={project.githubUrl} 
-            className="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm font-medium transition duration-300"
+            className="inline-flex items-center gap-1 text-gray-700 hover:text-gradient-purple-pink dark:text-gray-300 text-sm font-medium transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub />
-            Source Code
+            <span>Source Code</span>
           </Link>
           
-          <Link href={project.liveUrl} 
-            className="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm font-medium transition duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaExternalLinkAlt />
-            Live Demo
-          </Link>
+          {project.liveUrl && (
+            <Link href={project.liveUrl} 
+              className="inline-flex items-center gap-1 text-gray-700 hover:text-gradient-cyan-blue dark:text-gray-300 text-sm font-medium transition duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaExternalLinkAlt />
+              <span>Live Demo</span>
+            </Link>
+          )}
         </div>
       </div>
     </motion.article>

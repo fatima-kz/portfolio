@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Web Developer",
-  description: "Professional portfolio showcasing web development projects and skills",
+  title: "Fatima Khalid | Software Developer",
+  description: "Professional portfolio showcasing software development projects, skills, and experience in web development and AI integration.",
+  keywords: ["software developer", "web developer", "portfolio", "MERN stack", "AI integration", "Next.js", "React"],
+  authors: [{ name: "Fatima Khalid" }],
+  creator: "Fatima Khalid",
 };
 
 export default function RootLayout({
@@ -27,10 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}
       >
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

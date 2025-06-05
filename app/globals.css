@@ -5,8 +5,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #3b82f6;
-  --primary-hover: #2563eb;
+  --primary: #78A1BB;
+  --primary-hover: #5C88A1;
+
+  /* Pastel color variables */
+  --pastel-pink: #F8C0C8;
+  --pastel-blue: #AADCEE;
+  --pastel-purple: #C9BDF2;
+  --pastel-mint: #A8E6CF;
+  --pastel-yellow: #FFF1AC;
+  --pastel-peach: #FFD3B6;
+  --pastel-lavender: #D5B9F0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,18 +38,140 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--pastel-lavender);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--pastel-purple);
 }
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .animate-float {
+    animation-duration: 4s;
+  }
+
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0%   { filter: brightness(1) drop-shadow(0 0 5px rgba(0, 212, 255, 0.4)); }
+  50%  { filter: brightness(1.2) drop-shadow(0 0 15px rgba(0, 212, 255, 0.7)); }
+  100% { filter: brightness(1) drop-shadow(0 0 5px rgba(0, 212, 255, 0.4)); }
+}
+
+@keyframes rotate-slow {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes ping-slow {
+  0%   { transform: scale(1); opacity: 0.3; }
+  50%  { transform: scale(1.4); opacity: 0.1; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+.animate-float           { animation: float 6s ease-in-out infinite; }
+.animate-glow            { animation: glow 2s ease-in-out infinite; }
+.animate-rotate-slow     { animation: rotate-slow 15s linear infinite; }
+.animate-blink           { animation: blink 2s ease-in-out infinite; }
+.animate-ping-slow       { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--pastel-blue);
+}
+
+.glass-dark {
+  backdrop-filter: blur(12px);
+  background-color: rgba(17, 24, 39, 0.7);
+  border: 1px solid var(--pastel-purple);
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--pastel-blue);
+}
+
+.glass-nav-dark {
+  backdrop-filter: blur(12px);
+  background-color: rgba(17, 24, 39, 0.8);
+  border-bottom: 1px solid var(--pastel-purple);
+}
+
+/* Pastel backgrounds */
+.bg-pastel-purple  { background-color: var(--pastel-purple); }
+.bg-pastel-pink    { background-color: var(--pastel-pink); }
+.bg-pastel-blue    { background-color: var(--pastel-blue); }
+.bg-pastel-mint    { background-color: var(--pastel-mint); }
+.bg-pastel-yellow  { background-color: var(--pastel-yellow); }
+.bg-pastel-peach   { background-color: var(--pastel-peach); }
+.bg-pastel-lavender{ background-color: var(--pastel-lavender); }
+
+/* Pastel text colors - more subtle approach */
+.text-pastel-purple   { color: #8B7CB8; }
+.text-pastel-pink     { color: #E5A3B3; }
+.text-pastel-blue     { color: #7BB3C4; }
+.text-pastel-mint     { color: #7FC4A8; }
+.text-pastel-yellow   { color: #E6D68A; }
+.text-pastel-peach    { color: #D4A77B; }
+.text-pastel-lavender { color: #B5A4D1; }
+
+/* Professional heading colors */
+.text-heading-dark { color: #1f2937; }
+.dark .text-heading-dark { color: #f9fafb; }
+
+/* Subtle pastel backgrounds for accents only */
+.bg-pastel-purple-subtle  { background-color: rgba(201, 189, 242, 0.1); }
+.bg-pastel-pink-subtle    { background-color: rgba(248, 192, 200, 0.1); }
+.bg-pastel-blue-subtle    { background-color: rgba(170, 220, 238, 0.1); }
+.bg-pastel-mint-subtle    { background-color: rgba(168, 230, 207, 0.1); }
+.bg-pastel-yellow-subtle  { background-color: rgba(255, 241, 172, 0.1); }
+.bg-pastel-peach-subtle   { background-color: rgba(255, 211, 182, 0.1); }
+.bg-pastel-lavender-subtle{ background-color: rgba(213, 185, 240, 0.1); }
+
+/* Pastel shadows */
+.shadow-pastel-pink     { box-shadow: 0 0 15px var(--pastel-pink); }
+.shadow-pastel-blue     { box-shadow: 0 0 15px var(--pastel-blue); }
+.shadow-pastel-purple   { box-shadow: 0 0 15px var(--pastel-purple); }
+.shadow-pastel-mint     { box-shadow: 0 0 15px var(--pastel-mint); }
+.shadow-pastel-yellow   { box-shadow: 0 0 15px var(--pastel-yellow); }
+.shadow-pastel-peach    { box-shadow: 0 0 15px var(--pastel-peach); }
+.shadow-pastel-lavender { box-shadow: 0 0 15px var(--pastel-lavender); }
