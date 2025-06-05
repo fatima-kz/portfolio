@@ -19,12 +19,12 @@ const Navbar = () => {
             Portfolio
           </Link>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-10">
+          {/* Desktop Menu */}          <nav className="hidden md:flex space-x-10">
             <NavLink href="/#home">Home</NavLink>
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/#projects">Projects</NavLink>
             <NavLink href="/#skills">Skills</NavLink>
+            <NavLink href="/#experience">Experience</NavLink>
             <NavLink href="/#contact">Contact</NavLink>
           </nav>
 
@@ -38,12 +38,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <nav className="md:hidden pt-4 pb-3 flex flex-col space-y-3">
+        {isOpen && (          <nav className="md:hidden pt-4 pb-3 flex flex-col space-y-3">
             <MobileNavLink href="/#home" onClick={toggleMenu}>Home</MobileNavLink>
             <MobileNavLink href="/#about" onClick={toggleMenu}>About</MobileNavLink>
             <MobileNavLink href="/#projects" onClick={toggleMenu}>Projects</MobileNavLink>
             <MobileNavLink href="/#skills" onClick={toggleMenu}>Skills</MobileNavLink>
+            <MobileNavLink href="/#experience" onClick={toggleMenu}>Experience</MobileNavLink>
             <MobileNavLink href="/#contact" onClick={toggleMenu}>Contact</MobileNavLink>
           </nav>
         )}
