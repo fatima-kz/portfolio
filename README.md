@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fatima Khalid - Portfolio Website
+
+A modern, responsive portfolio website built with Next.js and Tailwind CSS.
+
+## Features
+
+- **Responsive Design**: Looks great on all devices - mobile, tablet, and desktop
+- **Modern UI**: Sleek design with smooth animations using Framer Motion
+- **Dark Mode Support**: Automatically switches based on system preferences
+- **Contact Form**: Integrated with NodeMailer for email functionality
+- **Portfolio Showcase**: Displays projects with descriptions and links
+- **Skills Section**: Highlights both technical and non-technical skills
+
+## Technologies Used
+
+- **Next.js 15+**: React framework for production
+- **TypeScript**: For type safety and better developer experience
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: For smooth animations
+- **React Icons**: For beautiful icons
+- **NodeMailer**: For contact form email functionality
 
 ## Getting Started
 
