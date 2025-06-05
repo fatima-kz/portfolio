@@ -47,12 +47,11 @@ const nonTechnicalSkills: Skill[] = [
 
 
 const Skills = () => {
-  return (
-    <section id="skills" className="py-20 bg-pastel-mint/10 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+  return (    <section id="skills" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
       {/* Floating code symbols background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div 
-          className="absolute top-20 left-1/4 text-4xl text-pastel-purple/30 dark:text-pastel-lavender/20 font-mono"
+          className="absolute top-20 left-1/4 text-4xl text-gray-300/20 dark:text-gray-600/20 font-mono"
           animate={{ 
             y: [0, -15, 0],
             rotate: [0, 5, 0]
@@ -62,7 +61,7 @@ const Skills = () => {
           &lt;/&gt;
         </motion.div>
         <motion.div 
-          className="absolute bottom-20 right-1/4 text-5xl text-pastel-blue/30 dark:text-pastel-blue/20 font-mono"
+          className="absolute bottom-20 right-1/4 text-5xl text-gray-300/20 dark:text-gray-600/20 font-mono"
           animate={{ 
             y: [0, 20, 0],
             rotate: [0, -5, 0]
@@ -72,7 +71,7 @@ const Skills = () => {
           { }
         </motion.div>
         <motion.div 
-          className="absolute top-1/3 right-1/3 text-4xl text-pastel-pink/30 dark:text-pastel-pink/20 font-mono"
+          className="absolute top-1/3 right-1/3 text-4xl text-gray-300/20 dark:text-gray-600/20 font-mono"
           animate={{ 
             y: [0, 15, 0],
             rotate: [0, 10, 0]
@@ -112,8 +111,7 @@ const SkillCategory = ({ title, skills }: { title: string; skills: Skill[] }) =>
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >      <h3 className="text-xl font-bold text-pastel-blue mb-6 inline-block">
+      transition={{ duration: 0.6 }}    >      <h3 className="text-xl font-bold text-heading-dark mb-6 inline-block">
         {title}
       </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">

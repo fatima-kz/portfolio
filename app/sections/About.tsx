@@ -34,7 +34,7 @@ const About = () => {
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-neon-purple/20 group">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 group-hover:opacity-70 transition-opacity duration-500 z-10 opacity-0"></div>
               <Image 
-                src="/fatima khalid.jpeg" 
+                src="/fatima.JPEG" 
                 alt="About Me" 
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -87,7 +87,8 @@ const About = () => {
             
             <p className="text-gray-600 dark:text-gray-300 mb-8">
               My experience spans across the MERN stack, Python-based AI tools, and modern frontend frameworks like Next.js and Tailwind. I&apos;ve worked in startup-style environments like the Forge Internship, contributed to open-source-style projects, and led development from scratch to deployment. My goal? To create seamless digital experiences and intelligent systems and to keep growing every single step of the way.
-            </p>              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            </p>              
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <ServiceCard 
                 icon={<FaCode size={28} />}
                 title="Full-Stack Development"
