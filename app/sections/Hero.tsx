@@ -74,8 +74,7 @@ const Hero = () => {
             >
               I&apos;m a developer who cares about building software that feels intuitive and actually helps. Not just polished, but purposeful.
             </motion.p>
-            
-            <motion.div 
+              <motion.div 
               className="flex flex-wrap gap-4"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -91,6 +90,14 @@ const Hero = () => {
               >
                 Contact Me
               </Link>
+              
+              <a 
+                href="/Fatima_Khalid_CV.pdf" 
+                download="Fatima_Khalid_CV.pdf"
+                className="px-6 py-3 bg-pastel-purple hover:bg-pastel-lavender text-white font-medium rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+              >
+                Download CV
+              </a>
             </motion.div>
           </motion.div>
             <motion.div 
