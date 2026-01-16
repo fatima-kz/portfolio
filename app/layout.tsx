@@ -29,10 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}
       >
         <Navbar />
+        <iframe src="https://voice.ailabapp.com/embed/6969fd4a91b5917cc6ac8c31" allow="microphone" style="position: fixed; bottom: 0; right: 0; z-index: 9999; width: 100px; height: 180px; border: none; outline: none; background-color: none; padding-top:40px"></iframe>
         <main>{children}</main>
         <Footer />
       </body>
