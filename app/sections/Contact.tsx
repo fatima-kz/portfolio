@@ -5,59 +5,35 @@ import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-pastel-peach/10 dark:bg-pastel-peach/5 relative overflow-hidden">
+  return (    <section id="contact" className="py-20 bg-pastel-peach/10 dark:bg-pastel-peach/5 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 bg-pastel-purple/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-pastel-mint/20 rounded-full blur-3xl"></div>
       </div>
       
-      {/* Voice AI Embed - Fixed position at bottom right */}
-      <iframe 
-        src="https://voice.ailabapp.com/embed/6969fd4a91b5917cc6ac8c31" 
-        allow="microphone" 
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          right: 0,
-          zIndex: 9999,
-          width: '100px',
-          height: '180px',
-          border: 'none',
-          outline: 'none',
-          backgroundColor: 'transparent',
-          paddingTop: '40px'
-        }}
-        title="Voice AI Assistant"
-      />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y:  0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-heading-dark">
+        >          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-heading-dark">
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to discuss a potential collaboration? I&apos;d love to hear from you!
           </p>
           <div className="w-24 h-1 bg-pastel-purple mx-auto mt-4 rounded-full"></div>
-        </motion.div>
-        
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        </motion.div>          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           <motion.div 
             className="lg:w-1/3"
-            initial={{ opacity: 0, x:  -30 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-bold text-heading-dark mb-6">
+          >            <h3 className="text-2xl font-bold text-heading-dark mb-6">
               Contact Information
             </h3>
             
@@ -80,14 +56,14 @@ const Contact = () => {
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 mt-8 glass dark:glass-dark p-4 rounded-lg">
-              I&apos;m available for internships, freelance projects, full-time positions, and consultations. Don&apos;t hesitate to reach out! 
+              I&apos;m available for internships, freelance projects, full-time positions, and consultations. Don&apos;t hesitate to reach out!
             </p>
           </motion.div>
           
           <motion.div 
             className="lg:w-2/3"
             initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity:  1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
@@ -111,14 +87,13 @@ const ContactInfo = ({
   content: string;
   link: string;
   color: string;
-}) => {
-  return (
+}) => {  return (
     <motion.a 
       href={link} 
       className={`flex items-start gap-4 p-5 glass dark:glass-dark rounded-xl shadow-lg hover:shadow-${color}/20 transition-all duration-300 group relative overflow-hidden`}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ y:  -5 }}
+      whileHover={{ y: -5 }}
     >
       <div className={`absolute top-0 left-0 h-1 w-full bg-${color}`}></div>
       <div className={`text-${color} mt-1 text-xl transition-transform duration-300 group-hover:scale-125`}>
