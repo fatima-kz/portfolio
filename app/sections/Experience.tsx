@@ -17,6 +17,7 @@ const Experience = () => {  const experiences = [
       techIcons: [FaCode, FaLaptopCode],
       color: "pastel-mint",
       bgColor: "bg-pastel-mint/10 dark:bg-pastel-mint/5",
+      textColor: "text-teal-700",
     },
     {
       title: "AI Automation Assistant",
@@ -29,6 +30,7 @@ const Experience = () => {  const experiences = [
       techIcons: [FaCode, FaLaptopCode],
       color: "pastel-pink",
       bgColor: "bg-pastel-pink/10 dark:bg-pastel-pink/5",
+      textColor: "text-pink-700",
     },
     {
       title: "Software Engineering Intern",
@@ -41,6 +43,7 @@ const Experience = () => {  const experiences = [
       techIcons: [SiMongodb, SiExpress, SiReact, SiNodedotjs],
       color: "pastel-purple",
       bgColor: "bg-pastel-purple/10 dark:bg-pastel-purple/5",
+      textColor: "text-purple-700",
     },
     {
       title: "Bachelor of Science in Computer Science",
@@ -53,6 +56,7 @@ const Experience = () => {  const experiences = [
       techIcons: [FaCode, FaLaptopCode],
       color: "pastel-blue",
       bgColor: "bg-pastel-blue/10 dark:bg-pastel-blue/5",
+      textColor: "text-blue-700",
     }
   ];return (    <section id="experience" className="py-16 bg-pastel-lavender/10 dark:bg-pastel-lavender/5 relative overflow-hidden">
       {/* Decorative background elements */}
@@ -76,7 +80,7 @@ const Experience = () => {  const experiences = [
               <span className="absolute -bottom-3 left-0 w-full h-1 bg-pastel-purple rounded-full"></span>
             </h2>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A creative journey through my professional experience and education that has shaped my skills and perspective.
           </p>
         </motion.div>        <div className="relative">
@@ -113,24 +117,24 @@ const Experience = () => {  const experiences = [
                           <FaGraduationCap className="text-white text-xl" />
                         )}
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h3>
+                      <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
                     </div>
                     
-                    <h4 className={`text-lg font-semibold text-${exp.color} mb-3`}>
+                    <h4 className={`text-lg font-semibold ${exp.textColor} mb-3`}>
                       {exp.company}
                     </h4>
                     
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 mb-2">
+                    <div className="flex items-center text-gray-500 mb-2">
                       <FaMapMarkerAlt className="mr-1" />
                       <span className="font-medium">{exp.location}</span>
                     </div>
                     
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 mb-4">
+                    <div className="flex items-center text-gray-500 mb-4">
                       <FaCalendarAlt className="mr-1" />
                       <span className="font-medium">{exp.period}</span>
                     </div>
                     
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    <p className="text-gray-600 mb-4">
                       {exp.description}
                     </p>
                     
@@ -138,7 +142,7 @@ const Experience = () => {  const experiences = [
                         {exp.skills.map((skill, idx) => (
                           <span 
                             key={idx}
-                            className={`text-xs px-2 py-1 rounded-full bg-${exp.color}/20 text-${exp.color} font-medium border border-${exp.color}/30`}
+                            className={`text-xs px-2 py-1 rounded-full bg-${exp.color}/20 ${exp.textColor} font-medium border border-${exp.color}/30`}
                           >
                             {skill}
                           </span>
@@ -149,7 +153,7 @@ const Experience = () => {  const experiences = [
                         {exp.techIcons.map((Icon, idx) => (
                           <Icon 
                             key={idx} 
-                            className={`text-xl opacity-70 hover:opacity-100 transition-opacity text-${exp.color}`} 
+                            className={`text-xl opacity-70 hover:opacity-100 transition-opacity ${exp.textColor}`}
                           />
                         ))}
                       </div>

@@ -185,6 +185,17 @@ html {
   border-bottom: 1px solid var(--pastel-purple);
 }
 
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background-color: rgba(17, 24, 39, 0.9);
+    border: 1px solid var(--pastel-purple);
+  }
+  .glass-nav {
+    background-color: rgba(17, 24, 39, 0.95);
+    border-bottom: 1px solid var(--pastel-purple);
+  }
+}
+
 /* Ultra-light shadows - no blur */
 .shadow-pastel-pink {
   box-shadow: 0 2px 4px rgba(248, 192, 200, 0.2);
@@ -238,6 +249,14 @@ html {
 
   .glass-dark,
   .glass-nav-dark {
+    background-color: rgba(17, 24, 39, 1);
+  }
+}
+
+@media (max-width: 640px) and (prefers-color-scheme: dark),
+       (prefers-reduced-motion: reduce) and (prefers-color-scheme: dark) {
+  .glass,
+  .glass-nav {
     background-color: rgba(17, 24, 39, 1);
   }
 }
