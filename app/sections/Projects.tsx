@@ -15,7 +15,25 @@ type Project = {
   liveUrl: string;
 };
 
-const projects: Project[] = [  
+const projects: Project[] = [
+  {
+    id: 0,
+    title: "DataSynx — AI Agent Platform",
+    description: "Led AI engineering for an extensible AI agent platform built for organizations. Designed modular agent workflows capable of handling organization-level interactions and automations. (Details restricted due to NDA.)",
+    image: "/projects/cd.jpg",
+    tags: ["LangGraph", "AI Agents", "Python", "Team Lead"],
+    githubUrl: "",
+    liveUrl: ""
+  },
+  {
+    id: -1,
+    title: "AI Patient Management App (FYP)",
+    description: "Full-stack patient management system with an integrated AI agent for appointment booking, initial diagnosis, and prescription viewing. Built with LangGraph, Django REST Framework, and Supabase.",
+    image: "/projects/aisc.png",
+    tags: ["LangGraph", "Django", "Supabase", "Next.js", "AI Agent"],
+    githubUrl: "",
+    liveUrl: ""
+  },
   {
     id: 1,
     title: "Chameleon",
@@ -189,14 +207,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         </div>
         
         <div className="flex justify-between">
-          <Link href={project.githubUrl} 
-            className="inline-flex items-center gap-1 text-gray-700 hover:text-gradient-purple-pink dark:text-gray-300 text-sm font-medium transition duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-            <span>Source Code</span>
-          </Link>
+          {project.githubUrl && (
+            <Link href={project.githubUrl}
+              className="inline-flex items-center gap-1 text-gray-700 hover:text-gradient-purple-pink dark:text-gray-300 text-sm font-medium transition duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+              <span>Source Code</span>
+            </Link>
+          )}
           
           {project.liveUrl && (
             <Link href={project.liveUrl} 

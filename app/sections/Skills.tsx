@@ -1,16 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
-  FaReact, FaNodeJs, 
-  FaGit, FaPython,
+import {
+  FaReact, FaNodeJs,
+  FaGit, FaPython, FaAws,
   FaSearch, FaProjectDiagram, FaStar, FaTasks,
-  FaUserTie, FaUsers, FaBrain
+  FaUserTie, FaUsers, FaBrain, FaRobot, FaMicrophone
 } from 'react-icons/fa';
-import { 
-  SiNextdotjs, SiTailwindcss, SiMongodb, 
-  SiExpress, SiChainlink, SiOpencv, 
-  SiStreamlit, SiNotion 
+import {
+  SiNextdotjs, SiTailwindcss, SiMongodb,
+  SiExpress, SiChainlink, SiOpencv,
+  SiStreamlit, SiNotion, SiTypescript, SiDjango,
+  SiDocker, SiPostgresql
 } from 'react-icons/si';
 
 type Skill = {
@@ -22,15 +23,22 @@ type Skill = {
 const technicalSkills: Skill[] = [
   { name: 'Next.js', icon: <SiNextdotjs size={32} />, color: 'text-black dark:text-white' },
   { name: 'React', icon: <FaReact size={32} />, color: 'text-cyan-400' },
+  { name: 'TypeScript', icon: <SiTypescript size={32} />, color: 'text-blue-500' },
   { name: 'Node.js', icon: <FaNodeJs size={32} />, color: 'text-green-500' },
-  { name: 'MongoDB', icon: <SiMongodb size={32} />, color: 'text-green-600' },
-  { name: 'Express.js', icon: <SiExpress size={32} />, color: 'text-gray-600' },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss size={32} />, color: 'text-cyan-500' },
   { name: 'Python', icon: <FaPython size={32} />, color: 'text-yellow-400' },
+  { name: 'Django', icon: <SiDjango size={32} />, color: 'text-green-700' },
+  { name: 'Express.js', icon: <SiExpress size={32} />, color: 'text-gray-600' },
+  { name: 'MongoDB', icon: <SiMongodb size={32} />, color: 'text-green-600' },
+  { name: 'PostgreSQL', icon: <SiPostgresql size={32} />, color: 'text-blue-600' },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss size={32} />, color: 'text-cyan-500' },
   { name: 'LangChain', icon: <SiChainlink size={32} />, color: 'text-purple-500' },
   { name: 'LangGraph', icon: <FaProjectDiagram size={32} />, color: 'text-rose-500' },
-  { name: 'Gemini AI', icon: <FaStar size={32} />, color: 'text-indigo-500' },
   { name: 'RAG', icon: <FaSearch size={32} />, color: 'text-yellow-400' },
+  { name: 'n8n', icon: <FaRobot size={32} />, color: 'text-pink-500' },
+  { name: 'VAPI', icon: <FaMicrophone size={32} />, color: 'text-purple-400' },
+  { name: 'Docker', icon: <SiDocker size={32} />, color: 'text-blue-400' },
+  { name: 'AWS', icon: <FaAws size={32} />, color: 'text-orange-400' },
+  { name: 'Gemini AI', icon: <FaStar size={32} />, color: 'text-indigo-500' },
   { name: 'OpenCV', icon: <SiOpencv size={32} />, color: 'text-blue-400' },
   { name: 'Streamlit', icon: <SiStreamlit size={32} />, color: 'text-pink-500' },
   { name: 'Git', icon: <FaGit size={32} />, color: 'text-orange-600' },
