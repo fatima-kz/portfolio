@@ -38,25 +38,6 @@ export default function RootLayout({
         
         <main>{children}</main>
         <Footer />
-        
-        {/* Voice Assistant */}
-        <iframe 
-          src="https://voice.ailabapp.com/embed/6969fd4a91b5917cc6ac8c31" 
-          allow="microphone" 
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            right: 0,
-            zIndex: 9999,
-            width: '100px',
-            height: '180px',
-            border: 'none',
-            outline: 'none',
-            backgroundColor: 'transparent',
-            paddingTop: '40px'
-          }}
-          title="Voice Assistant"
-        />
       </body>
     </html>
   );

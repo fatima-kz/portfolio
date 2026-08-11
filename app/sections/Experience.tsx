@@ -10,8 +10,8 @@ const Experience = () => {  const experiences = [
       title: "AI Lead",
       company: "Datasynx",
       location: "Remote (Contract)",
-      period: "July 2025 - Feb 2026",
-      description: "Led the AI engineering team and architected the core AI module for the platform. Managed end-to-end development of AI components used by organizations. Designed modular agent workflows and oversaw team coordination, documentation, and technical planning. (Details limited due to NDA.)",
+      period: "July 2025 - Present",
+      description: "Currently leading the AI engineering efforts at Datasynx, architecting core AI modules and building scalable workflows for real-world product use. I coordinate development, documentation, and technical planning while helping shape the platform's AI direction.",
       type: "work",
       skills: ["AI Agents", "Team Leadership", "Architecture", "LangGraph"],
       techIcons: [FaCode, FaLaptopCode],
@@ -80,7 +80,7 @@ const Experience = () => {  const experiences = [
               <span className="absolute -bottom-3 left-0 w-full h-1 bg-pastel-purple rounded-full"></span>
             </h2>
           </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-200 max-w-3xl mx-auto">
             A creative journey through my professional experience and education that has shaped my skills and perspective.
           </p>
         </motion.div>        <div className="relative">
@@ -117,24 +117,24 @@ const Experience = () => {  const experiences = [
                           <FaGraduationCap className="text-white text-xl" />
                         )}
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h3>
                     </div>
                     
                     <h4 className={`text-lg font-semibold ${exp.textColor} mb-3`}>
                       {exp.company}
                     </h4>
                     
-                    <div className="flex items-center text-gray-500 mb-2">
+                    <div className="flex items-center text-gray-500 dark:text-gray-300 mb-2">
                       <FaMapMarkerAlt className="mr-1" />
                       <span className="font-medium">{exp.location}</span>
                     </div>
                     
-                    <div className="flex items-center text-gray-500 mb-4">
+                    <div className="flex items-center text-gray-500 dark:text-gray-300 mb-4">
                       <FaCalendarAlt className="mr-1" />
                       <span className="font-medium">{exp.period}</span>
                     </div>
                     
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 dark:text-gray-200 mb-4">
                       {exp.description}
                     </p>
                     
@@ -142,7 +142,7 @@ const Experience = () => {  const experiences = [
                         {exp.skills.map((skill, idx) => (
                           <span 
                             key={idx}
-                            className={`text-xs px-2 py-1 rounded-full bg-${exp.color}/20 ${exp.textColor} font-medium border border-${exp.color}/30`}
+                            className={`text-xs px-2 py-1 rounded-full bg-${exp.color}/20 ${exp.textColor} dark:text-white font-medium border border-${exp.color}/30`}
                           >
                             {skill}
                           </span>

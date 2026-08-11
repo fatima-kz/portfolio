@@ -17,34 +17,43 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: 0,
-    title: "DataSynx — AI Agent Platform",
-    description: "Led AI engineering for an extensible AI agent platform built for organizations. Designed modular agent workflows capable of handling organization-level interactions and automations. (Details restricted due to NDA.)",
-    image: "/projects/cd.jpg",
-    tags: ["LangGraph", "AI Agents", "Python", "Team Lead"],
-    githubUrl: "",
-    liveUrl: ""
-  },
-  {
-    id: -1,
-    title: "AI Patient Management App (FYP)",
-    description: "Full-stack patient management system with an integrated AI agent for appointment booking, initial diagnosis, and prescription viewing. Built with LangGraph, Django REST Framework, and Supabase.",
+    id: 1,
+    title: "Mediease",
+    description: "A full-stack healthcare platform for patients and clinics, featuring AI-powered appointment booking, diagnosis support, and a modern interface for managing appointments and prescriptions.",
     image: "/projects/aisc.png",
     tags: ["LangGraph", "Django", "Supabase", "Next.js", "AI Agent"],
-    githubUrl: "",
-    liveUrl: ""
+    githubUrl: "https://github.com/fatima-kz/Mediease",
+    liveUrl: "https://mediease-website-s7bs.vercel.app/"
   },
   {
-    id: 1,
+    id: 2,
     title: "Chameleon",
     description: "A language exchange platform that connects language learners with native speakers for real-time conversation practice.",
     image: "/projects/chameleon11.jpg",
     tags: ["Next.js", "Node.js", "MongoDB", "LiveKit", "Tailwind CSS"],
-    githubUrl: "https://github.com/Minas-Code/Chameleon",
-    liveUrl: "https://chameleon.apps.minascode.com/"
+    githubUrl: "https://github.com/VertoTechnologies/Chameleon",
+    liveUrl: ""
   },
   {
-    id: 2,
+    id: 3,
+    title: "Quran Chat",
+    description: "A premium, minimalist Qur'an companion app that lets users chat with an AI assistant grounded in the Qur'an with citations, reflections, and a calm iOS-style experience.",
+    image: "/projects/QuranChat.png",
+    tags: ["React Native", "Expo", "TypeScript", "Supabase", "OpenAI"],
+    githubUrl: "https://github.com/fatima-kz/quranChat",
+    liveUrl: ""
+  },
+  {
+    id: 4,
+    title: "Memora",
+    description: "An AI-powered memory companion that helps users capture notes, voice, and photos and later query their own past experiences using semantic search.",
+    image: "/projects/memora.png",
+    tags: ["React Native", "Expo", "Supabase", "pgvector", "AI"],
+    githubUrl: "https://github.com/fatima-kz/Memora",
+    liveUrl: ""
+  },
+  {
+    id: 5,
     title: "AI Video Editor",
     description: "A video editor that uses AI to automatically edit videos, add effects only through simple user prompts making video creation faster and easier.",
     image: "/projects/cd.jpg",
@@ -53,25 +62,16 @@ const projects: Project[] = [
     liveUrl: ""
   },
   {
-    id: 3,
-    title: "AI Scheduling Assistant for Physiotherapy",
-    description: "An AI-powered scheduling assistant designed for physiotherapy clinics. It automates appointment bookings, manages therapist availability, sends reminders to patients, and optimizes schedules to reduce gaps and cancellations.",
-    image: "/projects/aisc.png",
-    tags: ["Gemini Api", "Streamlit", "LangGraph", "RAG", "Pandas"],
-    githubUrl: "https://github.com/fatima-kz/Mediease",
-    liveUrl: ""
-  },
-  {
-    id: 4,
+    id: 6,
     title: "Stock Videos Website",
     description: "A platform where users can browse, search, and download high-quality stock videos for personal or commercial use.",
     image: "/projects/video.png",
     tags: ["JavaScript", "HTML", "Express.js", "CSS", "MongoDB", "Render"],
     githubUrl: "https://github.com/fatima-kz/stockSite",
-    liveUrl: "https://www.stockvideo.site/"
+    liveUrl: ""
   },
   {
-    id: 5,
+    id: 7,
     title: "Plot Search",
     description: "A text analysis tool to analyze movie plots and recommend similar movies based on their textual content.",
     image: "/projects/plot-search.jpg",
@@ -80,16 +80,16 @@ const projects: Project[] = [
     liveUrl: ""
   },
   {
-    id: 6,
+    id: 8,
     title: "School Portal",
     description: "An on-going project in developement and testing. A school management system that allows students, teachers, and administrators to manage school operations efficiently.",
     image: "/projects/little gems (2).png",
     tags: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
     githubUrl: "https://github.com/CUIGirls/next-dashboard-ui",
-    liveUrl: "https://school-portal-lac.vercel.app"
+    liveUrl: ""
   },
   {
-    id: 7,
+    id: 9,
     title: "Space Game",
     description: "Designed and developed a 2D space-themed game using Unity with C#, incorporating custom graphics and gameplay mechanics",
     image: "/projects/space-game.jpg",
@@ -98,16 +98,14 @@ const projects: Project[] = [
     liveUrl: ""
   },
   {
-    id: 8,
+    id: 10,
     title: "RAG Nursing Agent",
     description: "An AI-powered assistant that answers nursing-related questions by retrieving information from uploaded PDF documents. Utilizes Retrieval-Augmented Generation (RAG) to provide accurate, context-aware responses to user queries.",
     image: "/projects/nursing.jpg",
     tags: ["RAG", "LangChain", "OpenAI", "Streamlit", "PDF Parsing"],
     githubUrl: "https://github.com/fatima-kz/Med_agent",
-    liveUrl: "https://fatima-kz-med-agent-app-0cyjoz.streamlit.app/"
-  },
-  
-  
+    liveUrl: ""
+  }
 ];
 
 const Projects = () => {
