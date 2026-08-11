@@ -82,11 +82,11 @@ const About = () => {
             </h3>
             
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I&apos;m Fatima Khalid. A Computer Science student in the end of my 3rd year. I&apos;m a developer who loves solving messy problems with clean code and smart design. I&apos;m obsessed with building things that work, feel intuitive, and occasionally surprise you with how clever they are. From web apps to AI agents, if it makes people&apos;s lives easier, I want to build it.
+              I am a fresh graduate in Computer Science and a developer who enjoys building things that are useful, practical, and thoughtfully designed. My work sits at the intersection of web development and AI, where I like turning ideas into products people can actually use. From full stack web apps to intelligent assistants and automation systems, I am most excited by projects that solve real problems in a simple way.
             </p>
             
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              My experience spans across the MERN stack, Python-based AI tools, and modern frontend frameworks like Next.js and Tailwind. I&apos;ve worked in startup-style environments like the Forge Internship, contributed to open-source-style projects, and led development from scratch to deployment. My goal? To create seamless digital experiences and intelligent systems and to keep growing every single step of the way.
+              Through my projects and experience, I have worked with technologies like Next.js, React, Node.js, Python, LangGraph, and modern AI tools. I have built everything from startup style MVPs to AI powered platforms, and I am always interested in learning the right tools for the job. What matters most to me is creating clean solutions, writing code that scales, and building experiences that feel natural and helpful.
             </p>              
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <ServiceCard 
